@@ -1,0 +1,8 @@
+nav ul{
+    height: 150px;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

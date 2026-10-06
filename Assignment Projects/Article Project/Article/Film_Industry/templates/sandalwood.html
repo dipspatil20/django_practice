@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<center>
+    <table border="2">
+        <tr> 
+            <th>NAME</th>
+            <th>DIRECTOR</th>
+            <th>IMDB</th>
+            <th>HERO</th>
+            <th>HEROINE</th>
+        </tr>
+        {% for i in context %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.dir}}</td>
+                <td>{{i.imdb}}</td>
+                <td>{{i.hero}}</td>
+                <td>{{i.heroine}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+
+{% endblock %}
