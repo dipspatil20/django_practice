@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<center>
+    <table border="2">
+        <tr> 
+            <th>title</th>
+            <th>date</th>
+            <th>location</th>
+            <th>type</th>
+        </tr>
+        {% for i in context %}
+            <tr>
+                <td>{{i.title}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.location}}</td>
+                <td>{{i.type}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+
+{% endblock %}

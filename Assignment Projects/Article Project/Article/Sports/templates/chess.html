@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<center>
+    <table border="2">
+        <tr> 
+            <th>NAME</th>
+            <th>COUNTRY</th>
+            <th>AGE</th>
+            <th>TITLE</th>
+            <th>RATING</th> 
+        </tr>
+        {% for i in context %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.country}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.rating}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+
+{% endblock %}
