@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block content  %}
+
+    <h1>Current Affairs</h1>
+
+<a href="{% url 'disaster' %}">Disaster</a>
+<br>
+
+<a href="{% url 'national' %}">National Security</a>
+<br>
+
+<a href="{% url 'political' %}">Political</a>
+
+{% endblock  %} 

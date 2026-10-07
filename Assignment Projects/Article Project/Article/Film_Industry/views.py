@@ -123,3 +123,6 @@ def molly(request):
 
 def bolly(request):
     return render(request,'bollywood.html',{'context':bollywood_movies})
+
+def film(request):
+    return render(request, 'film.html')

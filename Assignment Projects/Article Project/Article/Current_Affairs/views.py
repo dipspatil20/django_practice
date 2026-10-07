@@ -110,3 +110,6 @@ def national(request):
 
 def political(request):
     return render(request, 'political.html',{'context':political_data})
+
+def current_affairs(request):
+    return render(request, 'current_affairs.html')

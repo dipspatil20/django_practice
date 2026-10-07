@@ -124,3 +124,5 @@ def chess(request):
 def hockey(request):
     return render(request,'hocky.html',{'context':hockey_data})
 
+def sports(request):
+    return render(request, 'sports.html') 

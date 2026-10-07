@@ -14,11 +14,16 @@
     <nav>
         <ul>
             <li><a href="{% url 'home' %}">HOME</a></li>
-            <li><a href="{% url 'about' %}">Film Industry</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
             <li><a href="{% url 'services' %}">SERVICES</a></li>
             <li><a href="{% url 'help' %}">HELP</a></li>
         </ul>
     </nav>
+    <a href="{% url 'current_affairs' %}">Current Affairs</a> <br><br>
+
+    <a href="{% url 'film' %}">Film Industry</a><br><br>
+
+    <a href="{% url 'sports' %}">Sports</a><br><br>
 
     {% block content %}
 
