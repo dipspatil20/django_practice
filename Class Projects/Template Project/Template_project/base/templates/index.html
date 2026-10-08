@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+    <h1>This is home page...</h1>
+
+    {% for i in context %}
+        Name: {{i.name}} <br>
+        Subject: {{i.sub}} <br>
+        Desc: {{i.desc}} <br><br>
+    {% endfor %}
+
+{% endblock %}

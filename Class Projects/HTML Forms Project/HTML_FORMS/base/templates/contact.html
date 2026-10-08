@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <center>
+        <h2>fill the below form to contact us....</h2>
+        <table border="2">
+            <form method="post">
+                {% csrf_token %}
+
+                <tr>
+                    <th>
+                        <label id="fn">FIRST NAME</label>
+                    </th>
+                    <td>
+                        <input type="text" id="fn" name="fn">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label id="sn">SECOND NAME</label>
+                    </th>
+                    <td>
+                        <input type="text" id="sn" name="sn">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label id="phno">CONTACT</label>
+                    </th>
+                    <td>
+                        <input type="tel" name="phno" id="phno">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label id="email">EMAIL</label>
+                    </th>
+                    <td>
+                        <input type="email" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label id="reason">REASON</label>
+                    </th>
+                    <td>
+                        <textarea name="reason" id="reason">enter your reason...</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan = "2" align="center">
+                        <button type="submit">SUBMIT</button>
+                    </td>
+                </tr>
+
+            </form>
+        </table>
+    </center>
+
+{% endblock  %}
