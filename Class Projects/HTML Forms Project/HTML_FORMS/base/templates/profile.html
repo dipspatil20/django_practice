@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    {% for i, j in context.items %}
+
+        {{i}}:{{j}}
+        <br><br>
+
+
+       {% comment %} i:{{i}} {% endcomment %}
+    
+
+    {% endfor %}
+
+{% endblock  %}
