@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <table border="2">
+        <form method="post">
+            {% csrf_token %}
+
+            <tr>
+                <th>Book Name</th>
+                <td><input type="text" name="bname" value="{{context.bname}}" required></td>
+            </tr>
+            <tr>
+                <th>Author Name</th>
+                <td><input type="text" name="author" value="{{context.author}}" required></td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td><input type="text" name="genre" value="{{context.genre}}" required></td>
+            </tr>
+            <tr>
+                <th>Available</th>
+                <td><input type="radio" name="avail" value="True">YES
+                <input type="radio" name="avail" value="False">NO</td>
+            </tr>
+            <tr>
+                <td><button type="submit">SUBMIT</button></td>
+                <td><button type="reset">CLEAR</button></td>
+            </tr>
+
+        </form>
+    </table>
+    <a href="{% url 'read_b' %}"><button type="button">BACK</button></a>
+
+{% endblock  %}

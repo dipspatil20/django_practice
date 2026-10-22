@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <center>
+        <h1>Update Operation</h1>
+        <table border="2">
+            <form method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>
+                        <input type="text" name="name" value="{{ context.empname }}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="sal" value="{{ context.empsal }}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="dept" value="{{ context.dept }}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="loc" value="{{ context.loc }}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="avail" id="">
+                            <option value="True">YES</option>
+                            <option value="False">NO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">SUBMIT</button>
+                    </td>
+                </tr>
+
+            </form>
+        </table>
+    </center>
+
+{% endblock  %}

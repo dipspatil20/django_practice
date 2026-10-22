@@ -1,0 +1,50 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <center>
+        <h1>Create Operation</h1>
+        <table border="2">
+            <form method="post">
+                {% csrf_token %}
+
+                <tr>
+                    <td>
+                        <input type="text" name="name" placeholder="Empname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="sal" placeholder="salary" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="dept" placeholder="department" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="loc" placeholder="location" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="avail" id="">
+                            <option value="True">True</option>
+                            <option value="False">False</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">SUBMIT</button>
+                    </td>
+                </tr>
+            </form>
+        </table>
+
+    </center>
+    
+
+{% endblock  %}
