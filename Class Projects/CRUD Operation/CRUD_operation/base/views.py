@@ -27,14 +27,15 @@ def update(request, eid):
         data.loc = request.POST.get('loc')
         data.avail = request.POST.get('avail')
         data.save()
+        return redirect('read')
 
     return render(request,'update.html', {'context':data})
 
 
-# def delete(request,eid):
-#     data = get_list_or_404(Employee,id = eid)
-#     if request.method == 'POST':
-#         data.delete()
-#         return redirect('read')
+def delete(request,eid):
+    data = get_object_or_404(Employee,id = eid)
+    if request.method == 'POST':
+        data.delete()
+        return redirect('read')
     
-#     return render(request,'delete.html')
+    return render(request,'delete.html')
