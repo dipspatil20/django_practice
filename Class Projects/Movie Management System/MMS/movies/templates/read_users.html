@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <h1>Users Details...</h1>
+    {% for i in context %}
+        Name: {{i.name}} <br>
+        Contact: {{i.contact}} <br>
+        Mail: {{i.email}} <br>
+        Location: {{ i.addr }} <br>
+
+        <a href="{% url 'update_u' i.id %}"><button>UPDATE</button></a>
+        <a href="{% url 'delete_u' i.id %}"><button>DELETE</button></a> <br><br><br>
+    {% endfor %}
+
+{% endblock %}

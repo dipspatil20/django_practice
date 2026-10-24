@@ -12,4 +12,13 @@ class MovieModel(models.Model):
 
     def __str__(self):
         return self.mname
-    
+
+
+class UsersModel(models.Model):
+    name = models.CharField(max_length=30)
+    contact = models.IntegerField()
+    email = models.EmailField()
+    addr = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.name
