@@ -22,3 +22,13 @@ class UsersModel(models.Model):
 
     def __str__(self):
         return self.name
+
+class Booking(models.Model):
+    users = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
+    movies = models.ForeignKey(MovieModel, on_delete=models.CASCADE)
+    mov_date = models.DateField()
+    tickets = models.IntegerField()
+    tot_price = models.FloatField(blank=True, null=True)
+
+
+# codeshare.io/django_dmeo
