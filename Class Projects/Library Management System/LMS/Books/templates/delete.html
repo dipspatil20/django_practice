@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <h1>Are you sure to delete the book?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">SUBMIT</button>
+        <a href="{% url 'read' %}"><button type="button">NO</button></a>
+    </form>
+
+
+{% endblock %}

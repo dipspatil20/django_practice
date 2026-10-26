@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <h1>This is read Page</h1>
+    {% for i in context %}
+
+        ID: {{ i.id }} <br>
+        Name:{{ i.bname }} <br>
+        author:  {{ i.author }} <br>
+        genre:  {{ i.genre }} <br>
+        available:  {{ i.avail }} <br> <br><br>
+
+        <a href="{% url 'update' i.id %}"><button>update</button></a>
+        <a href="{% url 'delete' i.id %}"><button>delete</button></a>
+
+    {% endfor %}
+{% endblock %}
