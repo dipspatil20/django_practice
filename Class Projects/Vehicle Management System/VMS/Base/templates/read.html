@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+
+    <h1>This is read page.</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        {% for i in context %}
+            
+            License plate:{{ i.license_plate }} <br>
+            Make Model:{{ i.make_model }} <br>
+            Daily Rate:{{ i.daily_rate }} <br>
+            color : {{ i.color }} <br>
+            Is Rented?:{{ i.is_rented }} <br>
+
+            <a href="{% url 'update' i.id %}"><button type="button">UPDATE</button></a>
+            <a href="{% url 'delete' i.id %}"><button type="button">DELETE</button></a> <br><br>
+
+
+        {% endfor %}
+    </form>
+
+{% endblock  %}
