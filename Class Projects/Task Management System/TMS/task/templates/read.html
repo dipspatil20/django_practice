@@ -1,0 +1,18 @@
+{% extends "main.html"%}
+
+
+{% block content %}
+
+    <h1>Task details .....</h1>
+    {% for i in context %}
+        task_name: {{i.task_name}} <br>
+        task_descp: {{i.task_descp}} <br>
+        task_added_at: {{i.task_added_at}} <br>
+        task_status: {{i.task_status}}  <br>
+    
+    <a href="{% url 'update' i.id %}"><button type="submit">UPDATE</button></a>
+    <a href="{% url 'delete' i.id %}"><button type="button">DELETE</button></a><br> <br>
+{% endfor %}
+
+
+{% endblock %}

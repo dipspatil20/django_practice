@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <a href="{% url 'create_cat' %}"><button>ADD CATEGORY</button></a>
+    <br><br>
+    {% for i in context %}
+        Category: {{ i.cat }} <br>
+        <a href="{% url 'update_cat' i.id %}"><button>UPDATE</button></a>
+        <a href="{% url 'delete_cat' i.id %}"><button>DELETE</button></a> <br><br>
+    {% endfor %}
+
+
+{% endblock %}
+
+

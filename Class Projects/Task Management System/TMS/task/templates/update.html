@@ -1,0 +1,17 @@
+{% extends "main.html"%}
+
+
+{% block content %}
+    <h1>Update this record </h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <button type="submit">SUBMIT</button>
+        <a href="{% url 'read' %}"><button type="button">BACK</button></a>
+    </form>
+
+
+
+{% endblock %}
